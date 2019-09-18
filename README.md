@@ -92,3 +92,10 @@ Section 2 - Walking Skeleton Part 1 - API
 	- Projekt debug futtatása:
 		cd API/
 		dotnet watch run
+
+	- Adatok seed-elése az adatbázisba
+		DataContext.cs-ben OnModelCreating ÉS
+		dotnet ef migrations add SeedValues -p Persistence/ -s API
+
+		
+
