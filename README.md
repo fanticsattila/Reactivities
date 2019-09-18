@@ -78,4 +78,17 @@ Section 2 - Walking Skeleton Part 1 - API
 	- Projekt futtatása (Reactivities könyvtárból)
 		dotnet run -p API/
 	
-	
+	- Entity Framework hozzáadása Persistence projekt-hez
+		Ctrl+Shift+P -> nuget -> Add NuGet Package
+		Microsoft.EntityFrameworkCore
+		Microsoft.EntityFrameworkCore.Sqlite
+
+	- Entity migration:
+		dotnet ef migrations add InitialCreate -p Persistence/ -s API/
+
+	- Entity migration automatikus futtatása induláskor:
+		Program.cs-ben!
+
+	- Projekt debug futtatása:
+		cd API/
+		dotnet watch run

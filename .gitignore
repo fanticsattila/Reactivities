@@ -20,3 +20,5 @@ Persistence/obj/Debug/netstandard2.0/
 Persistence/obj/
 
 .vscode/
+
+*.db
