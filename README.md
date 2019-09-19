@@ -99,3 +99,20 @@ Section 2 - Walking Skeleton Part 1 - API
 
 		
 
+Section 3 - Walking Skeleton Part 2 - Client
+
+	- Create react app
+		Projekt gyökérkönyvtárában adjuk ki:
+		
+		npx create-react-app client-app --use-npm --typescript
+
+		Ez létrehozza a client-app könyvtárba a kiinduló projektünket.
+
+	- React alkalmazás indítása
+		cd client-app
+		npm start
+
+	
+
+	
+	
