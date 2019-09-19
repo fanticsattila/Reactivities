@@ -213,4 +213,6 @@ Section 3 - Walking Skeleton Part 2 - Client
 		cd client-app
 		npm install axios
 
-	
+	SemanticUI telepítése
+		cd client-app
+		npm install semantic-ui-react
