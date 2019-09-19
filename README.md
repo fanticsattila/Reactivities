@@ -112,7 +112,100 @@ Section 3 - Walking Skeleton Part 2 - Client
 		cd client-app
 		npm start
 
-	
+	- Typescript "alapozó"
+		tsconfig.json <- "isolatedModules": false,
 
+		let data=42;  <- data number típusú
+		data='42' <- hibát dob
+
+		let data: number | string; <- data szám, vagy string típusú
+
+		Interfészek, osztályok:
+
+		interface ICar {
+			color: string;
+			model: string;
+			topSpeed?: number; // optional property
+
+		}
+
+		const car1: ICar = {
+			color: 'blue',
+			model: 'BMW'
+		}
+
+		const car2: ICar = {
+			color: 'red',
+			model: 'Mercedes',
+			topSpeed: 100
+		}
+
+		const multiply = (x: number,y: number): string => {
+			return (x*y).toString();
+		}
+
+		const multiply2 = (x: number,y: number): void => {
+			x*y;
+		}		
+			
+	Projekten kívüli példa:
+	App.tsx:
+		mport React from 'react';
+		import logo from './logo.svg';
+		import './App.css';
+		import {cars} from './demo'
+		import CarItem from './CarItem';
+
+		const App: React.FC = () => {
+		return (
+			<div className="App">
+			<ul>
+				{cars.map((car)=>
+				(
+					<CarItem car={car}/>
+				))}
+			</ul>
+			</div>
+		);
+		}
+
+		export default App;
+
+
+	CarItem.tsx:
+		import React from 'react'
+		import { ICar } from './demo'
+
+		interface IProps {
+			car: ICar
+		}
+
+		const CarItem: React.FC<IProps> = ({car})=>{
+			return (
+				<div>
+					<h1>{car.model}</h1>
+				</div>
+			)
+		}
+
+		export default CarItem
 	
-	
+	Demo.ts
+		export interface ICar {
+			color: string;
+			model: string;
+			topSpeed?: number; // optional property
+		}
+		const car1: ICar = {
+			color: 'blue',
+			model: 'BMW'
+		}
+
+		const car2: ICar = {
+			color: 'red',
+			model: 'Mercedes',
+			topSpeed: 100
+		}		
+		export const cars = [car1, car2];	
+
+
