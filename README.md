@@ -209,3 +209,8 @@ Section 3 - Walking Skeleton Part 2 - Client
 		export const cars = [car1, car2];	
 
 
+	Axios telepítése
+		cd client-app
+		npm install axios
+
+	
