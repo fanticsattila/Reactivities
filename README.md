@@ -224,4 +224,9 @@ Section 4
 	cd API/
 	dotnet watch run
 
-	
+	MediatR hozzáadása az Application projekthez:
+
+		Ctrl+Shift+P -> nuget -> Add NuGet Package
+		MediatR.Extensions.Microsoft.DependencyInjection
+
+		
