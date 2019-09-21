@@ -216,3 +216,12 @@ Section 3 - Walking Skeleton Part 2 - Client
 	SemanticUI telepítése
 		cd client-app
 		npm install semantic-ui-react
+
+Section 4
+
+	dotnet ef migrations add "ActivityEntityAdded" -p Persistence/ -s API/
+
+	cd API/
+	dotnet watch run
+
+	
